@@ -11,5 +11,6 @@ def censor(value):
     if isinstance(value, str):
         for word in bad_words:
             if word in str(value):
-                return str(value.replace(word, '*'))
+                length = len(word)
+                return str(value.replace(word, '*'*length))
             return str(value)
